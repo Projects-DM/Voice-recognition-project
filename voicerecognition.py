@@ -21,3 +21,11 @@ def talk():
 
     print(f"Has dicho: {text}")
     return text.lower()   
+
+if "amazon" in talk():
+
+    engine.say("¿Qué producto buscas?")
+    engine.runAndWait()
+    text = talk()
+    webbrowser.open(f"https://www.amazon.es/s?k={text}")
+    
